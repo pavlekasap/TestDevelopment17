@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testreport Plan izvrsasvanja testova st. sluzbe - parcijalni</title>
+<link type="text/css" rel="stylesheet" href="http://localhost/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo" height="53" src="http://localhost/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Plan Execution Report</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Parcijalni ispit - studentska sluzba<br/>Test Plan: Plan izvrsasvanja testova st. sluzbe - parcijalni</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 01/02/2022</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 10px;"><b><a href="#toc_1_1">1.1.Dodavanje novog predmeta od strane Administratora</a></b></p>
+<p style="padding-left: 30px;"><a href="#toc_tc182">piss-4: Unos novog predmeta od strane administratora vise od 35 karakteta</a></p><p style="padding-left: 30px;"><a href="#toc_tc189">piss-5: Unos novog predmeta od strane administratora sa uslovom dodavanja bar jednog nastavnika</a></p><p style="padding-left: 30px;"><a href="#toc_tc198">piss-6: Unos novog predmeta od strane administratora sa dodavanjem  jednog nastavnika i studenta</a></p><p style="padding-left: 30px;"><a href="#toc_tc160">piss-1: Unos novog predmeta od strane administratora bez ogranicenja</a></p><p style="padding-left: 30px;"><a href="#toc_tc175">piss-3: Unos novog predmeta od strane administratora manje od 4 karakteta</a></p></div><h1 class="doclevel" >Test Project: Parcijalni ispit - studentska sluzba</h1>
+<div class="txtlevel"><p>
+	Izvr&scaron;iti manuelno testiranje aplikacije studentska služba i napisati izve&scaron;taje o testiranju sledećih funkcionalnosti</p></div>
+ <br/><p></p><a name='toc_1_1'></a>
+<h1 class='doclevel'>1.1.Test Suite : Dodavanje novog predmeta od strane Administratora</h1>
+<div><div>
+	Administrator dodaje novi predmet u sistem. Za novi predmet se mora uneti naziv (ne sme biti kraći od 4 slova,</div>
+<div>
+	ali ni duži od 35 slova). Kada administrator kreira novi predmet, ne sme mu biti omogućeno dodavanje nijednog</div>
+<div>
+	studenta. Za predmet se odmah mora dodati barem jedan nastavnik.</div>
+<div>
+	Ukoliko ne&scaron;to od zahteva nije ispunjeno sistem ne sme da snimi novi predmet.</div>
+</div><a name="toc_tc182"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="6">Test Case piss-4: Unos novog predmeta od strane administratora vise od 35 karakteta</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="5">admin</td></tr>
+<tr><td colspan="6"><span class="label">Summary:</span><br /><p>
+	Administrator je logovan na sajtu studentske sluzbe</p>
+<p>
+	Unos 36 karaktera za predmet</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution notes:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Klikom na Entites</p>
+</td><td><p>
+	dobijamo polja :&quot;IspitniRokovi&quot; , &quot;Nastavnici&quot; , &quot;Studenti&quot; ,&quot;Predmeti&quot; , &quot;IspitnePrijave&quot;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Kliko na Predmeti</p>
+</td><td><p>
+	Otvara se nov prozor sa prikazom Naziv/Studenti/Nastavnici (View,Edit,Delete)&nbsp; i mogucnost dodavanja Create a new Predmeti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Klikom na Create a new Predmeti</p>
+</td><td><p>
+	Dobijamo novu listu za unos Naziv/Studenti/Nastavnici sa opcijom Cancel/Save</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Klikom na liniji Naziv</p>
+</td><td><p>
+	Ispisujemo u polju naziv Predmet izmedju vise od 35 karaktera</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Klikom na Save</p>
+</td><td><p>
+	Dobijamo sacuvan Predmet od 35 karaktera i ispisom liste predmeta</p>
+</td><td>Po zahtevima administrator ne bi mogao da unese Predmet duzi od 35 karaktera</td><td>Failed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="5">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="5">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="5">Medium</td></tr>
+<tr><td colspan="6"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="5">REQ 1:  Dodavanje novih predmeta od strane Administratora<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="5">&nbsp;None<br/></td></tr>
+<tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="5">&nbsp;</td></tr>
+<tr><td width="20%" valign="top">Build</td><td colspan="5">Manuelno izvrsavanje testova studentske sluzbe</td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="5" >admin</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="5" ><b>Failed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="5" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="5" ><b>10.00</b></td></tr>
+</table>
+</div>
+<a name="toc_tc189"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="6">Test Case piss-5: Unos novog predmeta od strane administratora sa uslovom dodavanja bar jednog nastavnika</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="5">admin</td></tr>
+<tr><td colspan="6"><span class="label">Summary:</span><br /><p>
+	Administrator je logovan na sajtu studentske sluzbe</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution notes:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Klikom na Entites</p>
+</td><td><p>
+	dobijamo polja :&quot;IspitniRokovi&quot; , &quot;Nastavnici&quot; , &quot;Studenti&quot; ,&quot;Predmeti&quot; , &quot;IspitnePrijave&quot;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Kliko na Predmeti</p>
+</td><td><p>
+	Otvara se nov prozor sa prikazom Naziv/Studenti/Nastavnici (View,Edit,Delete)&nbsp; i mogucnost dodavanja Create a new Predmeti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Klikom na Create a new Predmeti</p>
+</td><td><p>
+	Dobijamo novu listu za unos Naziv/Studenti/Nastavnici sa opcijom Cancel/Save</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Klikom na liniji Naziv</p>
+</td><td><p>
+	Ispisujemo u polju naziv Predmet izmedju 4 i 35 slova</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Dodavanje jednog nastavnika</p>
+</td><td><p>
+	Nastavnik dodat na lisiti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">6</td><td><p>
+	Klikom na jednog od ponudjenih studenata i&nbsp;</p>
+</td><td><p>
+	Student dodat na listu</p>
+</td><td></td><td></td></tr><tr><td width="5">7</td><td><p>
+	Klikom na Save</p>
+</td><td><p>
+	Dobijamo sacuvan Predmet&nbsp; sa Nastavnikom, Studentom&nbsp; i ispisom liste ostalih predmeta predmeta&nbsp;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="5">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="5">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="5">Medium</td></tr>
+<tr><td colspan="6"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="5">REQ 1:  Dodavanje novih predmeta od strane Administratora<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="5">&nbsp;None<br/></td></tr>
+<tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="5">&nbsp;</td></tr>
+<tr><td width="20%" valign="top">Build</td><td colspan="5">Manuelno izvrsavanje testova studentske sluzbe</td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="5" >admin</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="5" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="5" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="5" ><b>20.00</b></td></tr>
+</table>
+</div>
+<a name="toc_tc198"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="6">Test Case piss-6: Unos novog predmeta od strane administratora sa dodavanjem  jednog nastavnika i studenta</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="5">admin</td></tr>
+<tr><td colspan="6"><span class="label">Summary:</span><br /><p>
+	Administrator je logovan na sajtu studentske sluzbe</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution notes:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Klikom na Entites</p>
+</td><td><p>
+	dobijamo polja :&quot;IspitniRokovi&quot; , &quot;Nastavnici&quot; , &quot;Studenti&quot; ,&quot;Predmeti&quot; , &quot;IspitnePrijave&quot;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Kliko na Predmeti</p>
+</td><td><p>
+	Otvara se nov prozor sa prikazom Naziv/Studenti/Nastavnici (View,Edit,Delete)&nbsp; i mogucnost dodavanja Create a new Predmeti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Klikom na Create a new Predmeti</p>
+</td><td><p>
+	Dobijamo novu listu za unos Naziv/Studenti/Nastavnici sa opcijom Cancel/Save</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Klikom na liniji Naziv</p>
+</td><td><p>
+	Ispisujemo u polju naziv Predmet izmedju 4 i 35 slova</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Dodavanje jednog nastavnika</p>
+</td><td><p>
+	Nastavnik dodat na lisiti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">7</td><td><p>
+	Klikom na Save</p>
+</td><td><p>
+	Dobijamo sacuvan Predmet&nbsp; sa Nastavnikom i ispisom liste ostalih predmeta predmeta&nbsp;</p>
+</td><td>Po zahtevu administrator nakon kreiranja Predmeta, ne bi trebao da ima mogucnost dodavanja ni jednog studenta</td><td>Failed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="5">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="5">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="5">Medium</td></tr>
+<tr><td colspan="6"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="5">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="5">&nbsp;None<br/></td></tr>
+<tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="5">&nbsp;</td></tr>
+<tr><td width="20%" valign="top">Build</td><td colspan="5">Manuelno izvrsavanje testova studentske sluzbe</td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="5" >admin</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="5" ><b>Failed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="5" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="5" ><b>15.00</b></td></tr>
+</table>
+</div>
+<a name="toc_tc160"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="6">Test Case piss-1: Unos novog predmeta od strane administratora bez ogranicenja</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="5">admin</td></tr>
+<tr><td colspan="6"><span class="label">Summary:</span><br /><p>
+	Administrator je logovan na sajtu studentske sluzbe</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution notes:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Klikom na Entites</p>
+</td><td><p>
+	dobijamo polja :&quot;IspitniRokovi&quot; , &quot;Nastavnici&quot; , &quot;Studenti&quot; ,&quot;Predmeti&quot; , &quot;IspitnePrijave&quot;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Kliko na Predmeti</p>
+</td><td><p>
+	Otvara se nov prozor sa prikazom Naziv/Studenti/Nastavnici (View,Edit,Delete)&nbsp; i mogucnost dodavanja Create a new Predmeti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Klikom na Create a new Predmeti</p>
+</td><td><p>
+	Dobijamo novu listu za unos Naziv/Studenti/Nastavnici sa opcijom Cancel/Save</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Klikom na liniji Naziv</p>
+</td><td><p>
+	Ispisujemo u polju naziv Predmet izmedju 4 i 35 slova</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Klikom na Save</p>
+</td><td><p>
+	Dobijamo sacuvan Predmet i ispisom liste predmeta</p>
+</td><td></td><td>Passed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="5">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="5">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="5">Medium</td></tr>
+<tr><td colspan="6"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="5">REQ 1:  Dodavanje novih predmeta od strane Administratora<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="5">&nbsp;None<br/></td></tr>
+<tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="5">&nbsp;</td></tr>
+<tr><td width="20%" valign="top">Build</td><td colspan="5">Manuelno izvrsavanje testova studentske sluzbe</td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="5" >admin</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="5" ><b>Passed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="5" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="5" ><b>20.00</b></td></tr>
+<tr><td width="20%" valign="top">Execution notes</td><td  colspan="5" >Test je prosao, unet je novi predmet bez ogranicenja</td></tr>
+</table>
+</div>
+<a name="toc_tc175"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="6">Test Case piss-3: Unos novog predmeta od strane administratora manje od 4 karakteta</th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="5">admin</td></tr>
+<tr><td colspan="6"><span class="label">Summary:</span><br /><p>
+	Administrator je logovan na sajtu studentske sluzbe</p>
+<p>
+	Unos 3 karaktera za predmet</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td><td><span class="label">Execution notes:</span></td><td><span class="label">Execution Status:</span></td></tr><tr><td width="5">1</td><td><p>
+	Klikom na Entites</p>
+</td><td><p>
+	dobijamo polja :&quot;IspitniRokovi&quot; , &quot;Nastavnici&quot; , &quot;Studenti&quot; ,&quot;Predmeti&quot; , &quot;IspitnePrijave&quot;</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">2</td><td><p>
+	Kliko na Predmeti</p>
+</td><td><p>
+	Otvara se nov prozor sa prikazom Naziv/Studenti/Nastavnici (View,Edit,Delete)&nbsp; i mogucnost dodavanja Create a new Predmeti</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">3</td><td><p>
+	Klikom na Create a new Predmeti</p>
+</td><td><p>
+	Dobijamo novu listu za unos Naziv/Studenti/Nastavnici sa opcijom Cancel/Save</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">4</td><td><p>
+	Klikom na liniji Naziv</p>
+</td><td><p>
+	Ispisujemo u polju naziv Predmet izmedju manja od 4 karaktera</p>
+</td><td></td><td>Passed</td></tr><tr><td width="5">5</td><td><p>
+	Klikom na Save</p>
+</td><td><p>
+	Dobijamo sacuvan Predmet od 3 karaktera i ispisom liste predmeta</p>
+</td><td>Test nije prosao jer po zahtevima Predmet ne bi trebao da bude manji od 4 karaktera</td><td>Failed</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="5">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="5">15.00</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Priority:</span></td><td colspan="5">Medium</td></tr>
+<tr><td colspan="6"></td></tr><tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="5">REQ 1:  Dodavanje novih predmeta od strane Administratora<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="5">&nbsp;None<br/></td></tr>
+<tr style="font-weight: bold;background: #EEE;text-align: left;"><td width="20%" valign="top">Execution Details</td><td colspan="5">&nbsp;</td></tr>
+<tr><td width="20%" valign="top">Build</td><td colspan="5">Manuelno izvrsavanje testova studentske sluzbe</td></tr>
+<tr><td width="20%" valign="top">Tester</td><td  colspan="5" >admin</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution Result:</span></td><td  colspan="5" ><b>Failed</b></td></tr>
+<tr><td width="20%"><span class="label">Execution Mode:</span></td><td  colspan="5" ><b>Manual</b></td></tr>
+<tr><td width="20%"><span class="label">Execution duration (min):</span></td><td  colspan="5" ><b>15.00</b></td></tr>
+</table>
+</div>
+<h1 class="doclevel">Execution time metrics</h1>
+<div>
+<p>Estimated time for executing 5 test cases (hours):1.25</p>
+<p>Time used for executing 5 test cases (hours):1.33</p>
+</div>
+
+</body>
+</html>
